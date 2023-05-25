@@ -1,0 +1,25 @@
+.fixed-background{
+    background: radial-gradient(circle at center, #0C4E9E 0%, #0F356B 24%, #0F2853 44%, #050E2D 100%);
+    position: fixed;
+    width: calc(100vw - 200px);
+    height: 100vh;
+    top: 0;
+    left: 200px;
+    z-index: -1;
+    
+    @media screen and (max-width:750px){
+        left: 0;
+        top: 60px;
+        height: calc(100vh - 60px);
+        width: 100%;
+    }
+}
+
+.main-container{
+    margin-left: 200px;
+
+    @media screen and (max-width:750px){
+        margin-left: 0;
+        margin: 60px 0;
+    }
+}

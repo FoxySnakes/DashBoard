@@ -1,1 +1,36 @@
-<p>navigation-mobile works!</p>
+<div class="container">
+    <div class="nav-top">
+        <div class="profil">
+            <div class="profil-picture">
+                <img src="assets/pictures/profil.jpg" alt="Photo de profil" height="40" width="40">
+            </div>
+            <p class="welcome">Bienvenue<span>,</span></p>
+            <p class="user-name">FoxySnake</p>
+        </div>
+        <div class="signout">
+            <a routerLink=""><span class="icon-logout"></span></a>
+        </div>
+    </div>
+    <nav>
+        <div>
+            <a class="active" routerLink=""><span class="icon-home"></span></a>
+            <p>Accueil</p>
+        </div>
+        <div>
+            <a routerLink="orders"><span class="icon-analyse"></span></a>
+            <p>Commandes</p>
+        </div>
+        <div>
+            <a routerLink="products"><span class="icon-livraison"></span></a>
+            <p>Produits</p>
+        </div>
+        <div>
+            <a routerLink="users"><span class="icon-service-client"></span></a>
+            <p>Utilisateurs</p>
+        </div>
+        <div>
+            <a routerLink="settings"><span class="icon-setting"></span></a>
+            <p>Paramètres</p>
+        </div>
+    </nav>
+</div>

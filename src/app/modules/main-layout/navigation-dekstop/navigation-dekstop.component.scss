@@ -1,0 +1,90 @@
+nav{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(-45deg, #031949, #050E2D);
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0;
+
+    .profil{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 0;
+
+        .profil-picture{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            overflow: hidden;
+            border: solid 2px white;
+        }
+        .user-name{
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+    ul {
+        flex:auto;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+
+        li:last-child{
+            margin-top: auto;
+        }
+        a{
+            font-size: 18px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.5s;
+            padding-left: 30px;
+            height: 60px;
+            width: 100%;
+
+            &.active{
+                border-left: solid 4px #4A5FD9;
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+                padding-left: 25px;
+            }
+            &:active,&:hover{
+                padding-left: 40px;
+            }
+            span{
+                font-weight: 400;
+            }
+        }
+    }
+    .signout{
+        margin: 10px auto 0 auto;
+        border: solid 1px white;
+        border-radius: 5px;
+        width: fit-content;
+
+        a{
+            padding: 10px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            transition: all 0.3s;
+
+            span{
+                transition: all 0.3s;
+            }
+            &:hover, &:hover > span, &:active, &:active > span{
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:750px){
+    nav{
+        display: none;
+    }
+}

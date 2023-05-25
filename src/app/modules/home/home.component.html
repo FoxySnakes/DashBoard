@@ -1,1 +1,209 @@
-<p>home works!</p>
+<div id="home">
+
+    <!-------------------- Order Status Information -------------------->
+    <div class="order-placed container">
+        <div>
+            <div class="color-bubble"></div>
+            <h3>Commande passée</h3>
+        </div>
+        <p>125</p>
+    </div>
+    <div class="order-pending container">
+        <div>
+            <div class="color-bubble"></div>
+            <h3>Commande en cours</h3>
+        </div>
+        <p>456</p>
+    </div>
+    <div class="order-finish container">
+        <div>
+            <div class="color-bubble"></div>
+            <h3>Commande terminée</h3>
+        </div>
+        <p>21 254</p>
+    </div>
+
+    <!-------------------- Site Data -------------------->
+    <div class="data-site">
+        <div class="visits-today container">
+            <div>
+                <div class="color-bubble"></div>
+                <h3>Nombre de visites ce jour-ci</h3>
+            </div>
+            <p>58</p>
+        </div>
+        <div class="average-time container">
+            <div>
+                <div class="color-bubble"></div>
+                <h3>Temps moyen sur le site</h3>
+            </div>
+            <p>12min 48s</p>
+        </div>
+    </div>
+
+    <!-------------------- Sell on last 30 days (Chart) -------------------->
+    <div class="chart container">
+        <div>
+            <h3>Ventes réalisés sur</h3>
+            <div>
+                <input type="radio" name="sell-filter" id="week-sell" value="7" checked>
+                <label for="week-sell">7j</label>
+                <input type="radio" name="sell-filter" id="double-week-sell" value="14">
+                <label for="double-week-sell">14j</label>
+                <input type="radio" name="sell-filter" id="month-sell" value="30">
+                <label for="month-sell">30j</label>
+            </div>
+        </div>
+        <div>
+            <canvas id="chart"></canvas>
+        </div>
+    </div>
+
+    <!-------------------- Money generated -------------------->
+    <div class="money-generate container">
+        <input type="radio" name="money-generate-filter" id="day-money-generate" checked>
+        <input type="radio" name="money-generate-filter" id="week-money-generate">
+        <input type="radio" name="money-generate-filter" id="month-money-generate">
+        <div class="title">
+            <div class="color-bubble"></div>
+            <div>
+                <h3>Argent généré sur : </h3>
+                <div>
+                    <label class="day-money-generate" for="day-money-generate">1j</label>
+                    <label class="week-money-generate" for="week-money-generate">7j</label>
+                    <label class="month-money-generate" for="month-money-generate">30j</label>
+                </div>
+            </div>
+        </div>
+        <div class="value">
+            <p class="day-money-generate">$1 548</p>
+            <p class="week-money-generate">$12 618</p>
+            <p class="month-money-generate">$60 483</p>
+        </div>
+    </div>
+
+    <!-------------------- Data Order -------------------->
+    <div class="data-order">
+        <div class="last-order container">
+            <div class="title">
+                <div class="color-bubble"></div>
+                <h3>Dernières commandes</h3>
+            </div>
+            <div class="orders">
+                <div class="order">
+                    <div>
+                        <img src="assets/pictures/anabelle-isaro.png" alt="Photo de profil de Anabelle Isaro">
+                    </div>
+                    <div>
+                        <p>#45843</p>
+                        <p>$48.73</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="order">
+                    <div>
+                        <img src="assets/pictures/philippe-roux.png" alt="Photo de profil de Philippe Roux">
+                    </div>
+                    <div>
+                        <p>#45842</p>
+                        <p>$244.18</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="order">
+                    <div>
+                        <img src="assets/pictures/manon-dupre.png" alt="Photo de profil de Manon Dupre">
+                    </div>
+                    <div>
+                        <p>#45841</p>
+                        <p>$348.75</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="order">
+                    <div>
+                        <img src="assets/pictures/raymond-remy.png" alt="Photo de profil de Raymond Remy">
+                    </div>
+                    <div>
+                        <p>#45840</p>
+                        <p>$94.84</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="order">
+                    <div>
+                        <img src="assets/pictures/anouk-herve.png" alt="Photo de profil de Anouk Herve">
+                    </div>
+                    <div>
+                        <p>#45839</p>
+                        <p>$12.97</p>
+                    </div>
+                </div>
+            </div>
+            <div class="see-more">
+                <a href="">Voir plus</a>
+            </div>
+        </div>
+        <div class="most-saw-products container">
+            <div class="title">
+                <div class="color-bubble"></div>
+                <h3>Produits les plus regardés</h3>
+            </div>
+            <div class="products">
+                <div class="product">
+                    <div>
+                        <p>#1</p>
+                    </div>
+                    <div>
+                        <p>Pack de 20 cahiers format A4 80 pages</p>
+                    </div>
+                    <span class="icon-next"></span>
+                </div>
+                <hr>
+                <div class="product">
+                    <div>
+                        <p>#2</p>
+                    </div>
+                    <div>
+                        <p>Pack de 50 stylo BIC couleur bleu</p>
+                    </div>
+                    <span class="icon-next"></span>
+                </div>
+                <hr>
+                <div class="product">
+                    <div>
+                        <p>#3</p>
+                    </div>
+                    <div>
+                        <p>Pack de 20 cahier à spirales format A4 120 pages</p>
+                    </div>
+                    <span class="icon-next"></span>
+                </div>
+                <hr>
+                <div class="product">
+                    <div>
+                        <p>#4</p>
+                    </div>
+                    <div>
+                        <p>Pack de 100 feuilles à carreaux format A4</p>
+                    </div>
+                    <span class="icon-next"></span>
+                </div>
+                <hr>
+                <div class="product">
+                    <div>
+                        <p>#5</p>
+                    </div>
+                    <div>
+                        <p>Pack de 200 feuilles blanches format A4</p>
+                    </div>
+                    <span class="icon-next"></span>
+                </div>
+            </div>
+            <div class="see-more">
+                <a href="">Voir plus</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
