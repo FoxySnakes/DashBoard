@@ -10,8 +10,8 @@ import { SettingsComponent } from './modules/settings/settings.component';
 const routes: Routes = [{
   path: '', component: LayoutComponent,
   children: [
-    { path: '', component: HomeComponent},
-    { path: 'home', redirectTo: ''},
+    { path: '', redirectTo: 'home', pathMatch: 'full'},
+    { path: 'home', component: HomeComponent},
     { path: 'orders', component: OrdersComponent },
     { path: 'products', component: ProductsComponent },
     { path: 'users', component: UsersComponent },

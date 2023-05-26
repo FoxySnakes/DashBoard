@@ -10,8 +10,8 @@ import { LayoutComponent } from './modules/main-layout/layout/layout.component';
 import { NavigationDekstopComponent } from './modules/main-layout/navigation-dekstop/navigation-dekstop.component';
 import { NavigationMobileComponent } from './modules/main-layout/navigation-mobile/navigation-mobile.component';
 import { SettingsComponent } from './modules/settings/settings.component';
-import { OrdersComponent } from './modules/orders/orders.component';
 import { UsersComponent } from './modules/users/users.component';
+import { OrdersModule } from './modules/orders/orders.module';
 
 @NgModule({
   declarations: [
@@ -23,12 +23,12 @@ import { UsersComponent } from './modules/users/users.component';
     NavigationDekstopComponent,
     NavigationMobileComponent,
     SettingsComponent,
-    OrdersComponent,
     UsersComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    OrdersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

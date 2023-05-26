@@ -29,13 +29,19 @@ nav{
     }
     ul {
         flex:auto;
-        padding-top: 50px;
+        margin-top: 50px;
         display: flex;
         flex-direction: column;
+        position: relative;
 
-        li:last-child{
-            margin-top: auto;
+        li{
+            position: relative;
+
+            &:last-child{
+                margin-top: auto;
+            }
         }
+
         a{
             font-size: 18px;
             font-weight: 500;
@@ -46,11 +52,21 @@ nav{
             padding-left: 30px;
             height: 60px;
             width: 100%;
+            background: transparent;
 
-            &.active{
+            >.background-link{
+                position: absolute;
                 border-left: solid 4px #4A5FD9;
                 background: linear-gradient(90deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
-                padding-left: 25px;
+                height: 60px;
+                width: 200px;
+                transition: all 0.3s;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
+            &.active >.background-link{
+                opacity: 1;
             }
             &:active,&:hover{
                 padding-left: 40px;

@@ -1,6 +1,6 @@
 export interface User {
     id : number,
-    name : number,
-    pictureUrl : string,
+    name : string,
+    pictureFileName : string,
     job : string,
 }

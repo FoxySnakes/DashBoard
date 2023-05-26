@@ -1,41 +1,66 @@
 <div id="orders">
     <input type="text" id="orders-search" placeholder="Rechercher par nom d'utilisateur">
-    <div class="filter">
-        <p>Trier par :</p>
-        <div>
-            <input type="radio" name="orders-filter-type" id="most-recent" checked>
-            <label for="most-recent">Plus récente</label>
-            <input type="radio" name="orders-filter-type" id="most-older">
-            <label for="most-older">Plus ancienne</label>
-            <input type="radio" name="orders-filter-type" id="user-name">
-            <label for="user-name">Nom d'utilisateur</label>
-            <input type="radio" name="orders-filter-type" id="state">
-            <label for="state">Etat</label>
-            <input type="radio" name="orders-filter-type" id="price">
-            <label for="price">Prix</label>
-        </div>
-    </div>
     <div class="orders-table">
         <div class="head-table">
-            <p>Id</p>
-            <p>Articles commandés</p>
-            <p>Acheteur</p>
-            <p>Etat</p>
-            <p>Prix</p>
+            <div class="header">
+                <p>Id</p>
+                <div class="arrow">
+                    <input type="radio" name="filter" id="id-increasing">
+                    <label for="id-increasing"><span class="icon-bleach" title="Du plus grand Id au plus petit"></span></label>
+                    <input type="radio" name="filter" id="id-decreasing">
+                    <label for="id-decreasing"><span class="icon-bleach" title="Du plus petit Id au plus grand"></span></label>
+                </div>
+            </div>
+            <div class="header">
+                <p>Articles commandés</p>
+                <div class="arrow">
+                    <input type="radio" name="filter" id="articles-increasing">
+                    <label for="articles-increasing"><span class="icon-bleach" title="Du plus grand nombre d'articles au plus petit"></span></label>
+                    <input type="radio" name="filter" id="articles-decreasing">
+                    <label for="articles-decreasing"><span class="icon-bleach" title="Du plus petit nombre d'articles au plus grand"></span></label>
+                </div>
+            </div>
+            <div class="header">
+                <p>Acheteur</p>
+                <div class="arrow">
+                    <input type="radio" name="filter" id="user-increasing">
+                    <label for="user-increasing"><span class="icon-bleach" title="Par ordre alphabétique"></span></label>
+                    <input type="radio" name="filter" id="user-decreasing" title="Par désordre alphabétique">
+                    <label for="user-decreasing"><span class="icon-bleach"></span></label>
+                </div>
+            </div>
+            <div class="header">
+                <p>Etat</p>
+                <div class="arrow">
+                    <input type="radio" name="filter" id="state-increasing">
+                    <label for="state-increasing"><span class="icon-bleach" title="De l'état commencé à l'état finit"></span></label>
+                    <input type="radio" name="filter" id="state-decreasing">
+                    <label for="state-decreasing"><span class="icon-bleach" title="De l'état finit à l'état commencé"></span></label>
+                </div>
+            </div>
+            <div class="header">
+                <p>Prix</p>
+                <div class="arrow">
+                    <input type="radio" name="filter" id="price-increasing">
+                    <label for="price-increasing"><span class="icon-bleach" title="Du plus grand prix au plus petit"></span></label>
+                    <input type="radio" name="filter" id="price-decreasing">
+                    <label for="price-decreasing"><span class="icon-bleach" title="Du plus petit prix au plus grand"></span></label>
+                </div>
+            </div>
         </div>
         <div class="orders">
-            <div class="order">
-                <p></p>
-                <p></p>
-                <div>
-                    <img src="" alt="">
-                    <p></p>
+            <div class="order" *ngFor="let order of sortedOrderList">
+                <p class="order-id">{{order.id}}</p>
+                <p class="order-products"><span *ngFor="let articleId of order.articlesId, first as isFirst"><span *ngIf="!isFirst">,</span> {{getProductName(articleId)}}</span></p>
+                <div class="order-user">
+                    <img src="../../../assets/pictures/users/{{getUser(order.userId)?.pictureFileName}}" alt="Photo de profil de {{getUser(order.userId)?.name}}" width="35" height="35">
+                    <p>{{getUser(order.userId)?.name}}</p>
                 </div>
-                <div>
-                    <div></div>
-                    <p></p>
+                <div class="order-state">
+                    <div class="order-{{getState(order.state)}}"></div>
+                    <p>{{order.state}}</p>
                 </div>
-                <p></p>
+                <p class="order-price">{{order.price}}</p>
             </div>
         </div>
     </div>

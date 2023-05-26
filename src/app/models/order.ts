@@ -1,11 +1,11 @@
 export interface Order {
     id : number,
-    articles : string[],
+    articlesId : number[],
     userId : number,
     state : OrderStatus,
     price: string;
 }
-enum OrderStatus {
+export enum OrderStatus {
     Placed = "Passée",
     Pending = "En cours",
     Completed = "Terminée"
