@@ -2,9 +2,9 @@ import { Component, NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './modules/main-layout/layout/layout.component';
 import { HomeComponent } from './modules/home/home.component';
-import { OrderComponent } from './modules/order/order.component';
+import { OrdersComponent } from './modules/orders/orders.component';
 import { ProductsComponent } from './modules/products/products.component';
-import { UserComponent } from './modules/user/user.component';
+import { UsersComponent } from './modules/users/users.component';
 import { SettingsComponent } from './modules/settings/settings.component';
 
 const routes: Routes = [{
@@ -12,9 +12,9 @@ const routes: Routes = [{
   children: [
     { path: '', component: HomeComponent},
     { path: 'home', redirectTo: ''},
-    { path: 'orders', component: OrderComponent },
+    { path: 'orders', component: OrdersComponent },
     { path: 'products', component: ProductsComponent },
-    { path: 'users', component: UserComponent },
+    { path: 'users', component: UsersComponent },
     { path: 'settings', component: SettingsComponent }
   ]
 }];

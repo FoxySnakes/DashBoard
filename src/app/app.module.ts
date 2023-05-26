@@ -4,27 +4,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './modules/home/home.component';
-import { OrderComponent } from './modules/order/order.component';
 import { ProductsComponent } from './modules/products/products.component';
 import { CustomersComponent } from './modules/customers/customers.component';
 import { LayoutComponent } from './modules/main-layout/layout/layout.component';
 import { NavigationDekstopComponent } from './modules/main-layout/navigation-dekstop/navigation-dekstop.component';
 import { NavigationMobileComponent } from './modules/main-layout/navigation-mobile/navigation-mobile.component';
-import { UserComponent } from './modules/user/user.component';
 import { SettingsComponent } from './modules/settings/settings.component';
+import { OrdersComponent } from './modules/orders/orders.component';
+import { UsersComponent } from './modules/users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    OrderComponent,
     ProductsComponent,
     CustomersComponent,
     LayoutComponent,
     NavigationDekstopComponent,
     NavigationMobileComponent,
-    UserComponent,
-    SettingsComponent
+    SettingsComponent,
+    OrdersComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
