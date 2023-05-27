@@ -6,7 +6,7 @@ import { orders, users, products } from 'src/assets/data';
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
-  styleUrls: ['./orders.component.scss', '../../../assets/icon.scss']
+  styleUrls: ['./orders.component.scss', './orders2.component.scss' , '../../../assets/icon.scss']
 })
 export class OrdersComponent implements OnInit{
 orderList = orders
