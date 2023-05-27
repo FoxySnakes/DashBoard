@@ -62,6 +62,9 @@
                 </div>
                 <p class="order-price">${{order.price}}</p>
             </div>
+            <div *ngIf="sortedOrderList.length == 0">
+                <p>test</p>
+            </div>
         </div>
     </div>
 </div>

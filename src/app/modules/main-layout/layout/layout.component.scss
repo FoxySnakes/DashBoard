@@ -17,9 +17,11 @@
 
 .main-container{
     margin-left: 200px;
+    width: calc(100vw - 200px);
 
     @media screen and (max-width:750px){
         margin-left: 0;
         margin: 60px 0;
+        width: 100vw;
     }
 }
