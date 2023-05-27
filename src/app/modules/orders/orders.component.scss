@@ -3,6 +3,7 @@
     flex-direction: column;
     padding: 40px;
     width: calc(100vw - 200px);
+    max-width: calc(100vw - 200px);
     height: 100vh;
     gap: 25px;
 
@@ -129,10 +130,10 @@
                 }
 
                 >.order-products {
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 1;
+                    white-space: nowrap;
                     overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 100%;
                     padding-right: 25px;
                     flex: auto;
                 }
