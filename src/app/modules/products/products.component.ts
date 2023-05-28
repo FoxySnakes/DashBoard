@@ -20,6 +20,7 @@ export class ProductsComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.sortedProductList = products
+    this.filterProducts()
 
     document.getElementById('products-search')?.addEventListener('keyup', (event: any) => {
       this.searchedWords = event.target.value

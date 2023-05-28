@@ -22,6 +22,7 @@ constructor(){
 
 ngOnInit(): void {
   this.sortedOrderList = orders
+  this.filterOrders();
   
   document.getElementById('orders-search')?.addEventListener('keyup', (event : any) => {
     this.searchedWords = event.target.value
