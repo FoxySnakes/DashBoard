@@ -79,25 +79,6 @@
         }
     }
 }
-
-.last-order {
-    .orders {
-        div {
-            div:nth-child(1) {
-                display: flex;
-                align-items: center;
-            }
-
-            div:nth-child(2)>p:nth-child(1) {
-                font-weight: 500;
-            }
-        }
-    }
-}
-
-
-
-
 @media screen and (max-width:1300px) {
     #home {
         grid-template-columns: repeat(3, 1fr);
