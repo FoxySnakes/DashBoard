@@ -69,7 +69,7 @@ export const products: Product[] = [
     {
         id: 1,
         name: 'Pack de 20 crayons',
-        pictureFileName: 'https://example.com/pack-crayons.jpg',
+        pictureFileName: 'anouk-herve.png',
         price: 9.99,
         stockQuantity: 100
     },

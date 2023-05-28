@@ -62,10 +62,10 @@ getState(state : OrderStatus){
 filterOrders(){
         switch(this.selectedFilter){
           case 'id-increasing':
-            this.sortedOrderList = this.orderList.sort((a, b) => b.id - a.id);
+            this.sortedOrderList = this.orderList.sort((a, b) => a.id - b.id);
             break;
           case 'id-decreasing':
-            this.sortedOrderList = this.orderList.sort((a, b) => a.id - b.id);
+            this.sortedOrderList = this.orderList.sort((a, b) => b.id - a.id);
             break;
           case 'articles-increasing':
             this.sortedOrderList = this.orderList.sort((a, b) => b.articlesId.length - a.articlesId.length);

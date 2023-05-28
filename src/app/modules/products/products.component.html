@@ -1,1 +1,44 @@
-<p>products works!</p>
+<div id="products">
+    <input type="text" id="products-search" placeholder="Rechercher par nom">
+    <div class="products-table">
+        <div class="head-table">
+            <div class="header">
+                <p>Id</p>
+                <div class="arrow">
+                    <input type="radio" name="filter" id="id-increasing">
+                    <label for="id-increasing"><span class="icon-bleach" title="Du plus grand Id au plus petit"></span></label>
+                    <input type="radio" name="filter" id="id-decreasing">
+                    <label for="id-decreasing"><span class="icon-bleach" title="Du plus petit Id au plus grand"></span></label>
+                </div>
+            </div>
+            <div class="header">
+                <p>Photo</p>
+            </div>
+            <div class="header">
+                <p>Nom</p>
+                <div class="arrow">
+                    <input type="radio" name="filter" id="name-increasing">
+                    <label for="name-increasing"><span class="icon-bleach" title="Par ordre alphabétique"></span></label>
+                    <input type="radio" name="filter" id="name-decreasing">
+                    <label for="name-decreasing"><span class="icon-bleach" title="Par désordre alphabétique"></span></label>
+                </div>
+            </div>
+        </div>
+        <div class="products">
+            <div class="product" *ngFor="let product of sortedProductList">
+                <p class="product-id">{{product.id}}</p>
+                <div class="product-picture">
+                    <img src="../../../assets/pictures/products/{{product.pictureFileName}}" alt="Photo de {{product.name}}" width="60" height="60">
+                </div>
+                <p class="product-name">{{product.name}}</p>
+                <div class="interactions">
+                    <p id="product-edit-{{product.id}}">Modifier</p>
+                    <p id="product-delete-{{product.id}}">Supprimer</p>
+                </div>
+            </div>
+            <div *ngIf="sortedProductList.length == 0">
+                <p>Aucun produit trouvé</p>
+            </div>
+        </div>
+    </div>
+</div>

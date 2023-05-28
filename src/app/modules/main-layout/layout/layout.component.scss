@@ -18,6 +18,7 @@
 .main-container{
     margin-left: 200px;
     width: calc(100vw - 200px);
+    overflow-x: hidden;
 
     @media screen and (max-width:750px){
         margin-left: 0;
