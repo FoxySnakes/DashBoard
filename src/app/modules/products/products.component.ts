@@ -38,9 +38,10 @@ export class ProductsComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
 
-    document.querySelectorAll('.interactions > p:nth-child(2)').forEach(element => {
+    document.querySelectorAll('div[class^="product-delete"]').forEach(element => {
+      //console.log(element)
       element.addEventListener('click', (event: any) => {
-        this.sortedProductList = this.sortedProductList.filter(x => x.id != event.target.id.split('-')[2])
+        this.sortedProductList = this.sortedProductList.filter(x => x.id != event.target.parentElement.className.split('-')[2])
       })
     })
   }

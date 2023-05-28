@@ -25,29 +25,35 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  .icon-user-1:before {
-    content: "\e90a";
-  }
-  .icon-checkout-1:before {
-    content: "\e90b";
-  }
-  .icon-next:before {
-    content: "\e907";
-  }
-  .icon-bleach:before {
+  .icon-logout:before {
     content: "\e900";
   }
-  .icon-logout:before {
-    content: "\e906";
-  }
   .icon-setting:before {
-    content: "\e905";
-  }
-  .icon-livraison:before {
-    content: "\e902";
+    content: "\e901";
   }
   .icon-home:before {
+    content: "\e902";
+  }
+  .icon-order:before {
     content: "\e903";
+  }
+  .icon-bleach:before {
+    content: "\e904";
+  }
+  .icon-next:before {
+    content: "\e905";
+  }
+  .icon-user:before {
+    content: "\e906";
+  }
+  .icon-checkout:before {
+    content: "\e907";
+  }
+  .icon-delete:before {
+    content: "\e908";
+  }
+  .icon-edit:before {
+    content: "\e909";
   }
   
   

@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="header">
-                <p>Photo</p>
+                <p>Image</p>
             </div>
             <div class="header">
                 <p>Nom</p>
@@ -32,8 +32,14 @@
                 </div>
                 <p class="product-name">{{product.name}}</p>
                 <div class="interactions">
-                    <p id="product-edit-{{product.id}}">Modifier</p>
-                    <p id="product-delete-{{product.id}}">Supprimer</p>
+                    <div class="product-edit-{{product.id}}">
+                        <p>Modifier</p>
+                        <span class="icon-edit"></span>
+                    </div>
+                    <div class="product-delete-{{product.id}}">
+                        <p>Supprimer</p>
+                        <span class="icon-delete"></span>
+                    </div>
                 </div>
             </div>
             <div *ngIf="sortedProductList.length == 0">

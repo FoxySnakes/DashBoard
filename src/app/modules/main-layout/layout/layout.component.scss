@@ -1,7 +1,7 @@
 .fixed-background{
     background: radial-gradient(circle at center, #0C4E9E 0%, #0F356B 24%, #0F2853 44%, #050E2D 100%);
     position: fixed;
-    width: calc(100vw - 200px);
+    width: calc(100vw - 20px);
     height: 100vh;
     top: 0;
     left: 200px;
@@ -17,12 +17,12 @@
 
 .main-container{
     margin-left: 200px;
-    width: calc(100vw - 200px);
-    overflow-x: hidden;
+    width: calc(100vw - 220px);
+    height: 100%;
 
     @media screen and (max-width:750px){
         margin-left: 0;
         margin: 60px 0;
-        width: 100vw;
+        width: calc(100vw - 20px);
     }
 }
