@@ -118,6 +118,9 @@
                     display: flex;
                     justify-content: center;
                 }
+                >.user-picture > img{
+                    border-radius: 100%;
+                }
                 >.user-name{
                     padding: 10px;
                     white-space: nowrap;

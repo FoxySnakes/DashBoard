@@ -118,6 +118,9 @@
                     display: flex;
                     justify-content: center;
                 }
+                >.product-picture > img{
+                    border-radius: 5px;
+                }
                 >.product-name{
                     padding: 10px;
                     white-space: nowrap;

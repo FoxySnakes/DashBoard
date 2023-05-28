@@ -90,53 +90,13 @@
                 <h3>Dernières commandes</h3>
             </div>
             <div class="orders">
-                <div class="order">
+                <div class="order" *ngFor="let order of recentOrders">
                     <div>
-                        <img src="assets/pictures/anabelle-isaro.png" alt="Photo de profil de Anabelle Isaro">
+                        <img src="../../../assets/pictures/users/{{getUser(order.userId)?.pictureFileName}}" alt="Photo de profil de {{getUser(order.id)?.name}}" width="40" height="40">
                     </div>
                     <div>
                         <p>#45843</p>
                         <p>$48.73</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="order">
-                    <div>
-                        <img src="assets/pictures/philippe-roux.png" alt="Photo de profil de Philippe Roux">
-                    </div>
-                    <div>
-                        <p>#45842</p>
-                        <p>$244.18</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="order">
-                    <div>
-                        <img src="assets/pictures/manon-dupre.png" alt="Photo de profil de Manon Dupre">
-                    </div>
-                    <div>
-                        <p>#45841</p>
-                        <p>$348.75</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="order">
-                    <div>
-                        <img src="assets/pictures/raymond-remy.png" alt="Photo de profil de Raymond Remy">
-                    </div>
-                    <div>
-                        <p>#45840</p>
-                        <p>$94.84</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="order">
-                    <div>
-                        <img src="assets/pictures/anouk-herve.png" alt="Photo de profil de Anouk Herve">
-                    </div>
-                    <div>
-                        <p>#45839</p>
-                        <p>$12.97</p>
                     </div>
                 </div>
             </div>
@@ -150,17 +110,16 @@
                 <h3>Produits les plus regardés</h3>
             </div>
             <div class="products">
-                <div class="product">
+                <div class="product" *ngFor="let product of bestProducts, index as i">
                     <div>
-                        <p>#1</p>
+                        <p>#{{i + 1}}</p>
                     </div>
                     <div>
-                        <p>Pack de 20 cahiers format A4 80 pages</p>
+                        <p>{{product.name}}</p>
                     </div>
                     <span class="icon-next"></span>
                 </div>
-                <hr>
-                <div class="product">
+                <!-- <div class="product">
                     <div>
                         <p>#2</p>
                     </div>
@@ -198,7 +157,7 @@
                         <p>Pack de 200 feuilles blanches format A4</p>
                     </div>
                     <span class="icon-next"></span>
-                </div>
+                </div> -->
             </div>
             <div class="see-more">
                 <a href="">Voir plus</a>

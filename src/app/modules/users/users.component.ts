@@ -40,7 +40,6 @@ export class UsersComponent implements OnInit, AfterViewInit{
   ngAfterViewInit(): void {
 
     document.querySelectorAll('div[class^="user-delete"]').forEach(element => {
-      //console.log(element)
       element.addEventListener('click', (event: any) => {
         this.sortedUserList = this.sortedUserList.filter(x => x.id != event.target.parentElement.className.split('-')[2])
       })

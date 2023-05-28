@@ -143,6 +143,10 @@
                     display: flex;
                     align-items: center;
                     gap: 7px;
+
+                    >img{
+                        border-radius: 100%;
+                    }
                 }
 
                 >.order-state {

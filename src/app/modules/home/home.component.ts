@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Chart, ChartItem } from 'chart.js/auto';
+import { Chart} from 'chart.js/auto';
+import { orders, products, users } from 'src/assets/data';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss', './home2.component.scss']
+  styleUrls: ['./home.component.scss', './home2.component.scss', '../../../assets/icon.scss']
 })
 export class HomeComponent implements OnInit {
+  
+  bestProducts = products.sort((a, b) => a.id - b.id).slice(0, 5);
+  recentOrders = orders.sort((a, b) => a.dateCreated.getDate() - b.dateCreated.getDate()).slice(0, 5);
+
   canvas : any;
   today = new Date(Date.now());
   salesData = [
@@ -130,5 +135,16 @@ export class HomeComponent implements OnInit {
         }
       })
     })
+  }
+
+  getUser(userId : number){
+    var user = users.find(x => x.id == userId)
+    if(user){
+      return user;
+    }
+    else{
+      //console.error(`No user exist with Id ${userId}`)
+      return null;
+    }
   }
 }

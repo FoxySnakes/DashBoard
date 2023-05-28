@@ -3,7 +3,8 @@ export interface Order {
     articlesId : number[],
     userId : number,
     state : OrderStatus,
-    price: string;
+    price: string,
+    dateCreated: Date;
 }
 export enum OrderStatus {
     Placed = "Passée",
