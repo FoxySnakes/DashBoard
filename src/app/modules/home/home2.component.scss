@@ -58,26 +58,6 @@
             border-color: rgba(43, 146, 241, 0.1);
         }
     }
-
-    .see-more {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        a {
-            padding: 5px 20px;
-            background-color: #0f63af;
-            border-radius: 5px;
-            border: solid 2px #0f63af;
-            transition: all 0.2s;
-            font-weight: 400;
-
-            &:hover,
-            &:active {
-                background-color: transparent;
-            }
-        }
-    }
 }
 @media screen and (max-width:1300px) {
     #home {
