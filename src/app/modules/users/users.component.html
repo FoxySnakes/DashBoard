@@ -1,1 +1,50 @@
-<p>users works!</p>
+<div id="users">
+    <input type="text" id="users-search" placeholder="Rechercher par nom">
+    <div class="users-table">
+        <div class="head-table">
+            <div class="header">
+                <p>Id</p>
+                <div class="arrow">
+                    <input type="radio" name="filter" id="id-increasing">
+                    <label for="id-increasing"><span class="icon-bleach" title="Du plus grand Id au plus petit"></span></label>
+                    <input type="radio" name="filter" id="id-decreasing">
+                    <label for="id-decreasing"><span class="icon-bleach" title="Du plus petit Id au plus grand"></span></label>
+                </div>
+            </div>
+            <div class="header">
+                <p>Image</p>
+            </div>
+            <div class="header">
+                <p>Nom</p>
+                <div class="arrow">
+                    <input type="radio" name="filter" id="name-increasing">
+                    <label for="name-increasing"><span class="icon-bleach" title="Par ordre alphabétique"></span></label>
+                    <input type="radio" name="filter" id="name-decreasing">
+                    <label for="name-decreasing"><span class="icon-bleach" title="Par désordre alphabétique"></span></label>
+                </div>
+            </div>
+        </div>
+        <div class="users">
+            <div class="user" *ngFor="let user of sortedUserList">
+                <p class="user-id">{{user.id}}</p>
+                <div class="user-picture">
+                    <img src="../../../assets/pictures/users/{{user.pictureFileName}}" alt="Photo de {{user.name}}" width="60" height="60">
+                </div>
+                <p class="user-name">{{user.name}}</p>
+                <div class="interactions">
+                    <div class="user-edit-{{user.id}}">
+                        <p>Modifier</p>
+                        <span class="icon-edit"></span>
+                    </div>
+                    <div class="user-delete-{{user.id}}">
+                        <p>Supprimer</p>
+                        <span class="icon-delete"></span>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="sortedUserList.length == 0">
+                <p>Aucun produit trouvé</p>
+            </div>
+        </div>
+    </div>
+</div>

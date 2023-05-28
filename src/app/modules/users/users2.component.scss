@@ -1,0 +1,59 @@
+@media screen and (max-width:1200px) {
+
+    .user-id,
+    .header:nth-child(1) {
+        min-width: 75px !important;
+        width: 75px !important;
+    }
+}
+
+@media screen and (max-width:900px) {
+    #users {
+        padding: 20px;
+    }
+    .user-picture,
+    .header:nth-child(2){
+        min-width: 75px !important;
+        width: 75px !important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #users {
+        width: auto;
+        max-width: calc(100vw - 20px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #users {
+        padding: 10px;
+    }
+    div[class^="user-edit"], div[class^="user-delete"]{
+        margin-inline: 5px;
+        height: 26px;
+        display: grid;
+        place-items: center;
+
+        >p{
+            display: none;
+        }
+        >span{
+            display: initial !important;
+            padding: 5px;
+        }
+        &:hover{
+            text-decoration: none !important;
+            background-color: #ffffff50;
+            border-radius: 5px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    input#users-search {
+        width: 100% !important;
+    }
+
+}

@@ -5,7 +5,7 @@ import { products } from 'src/assets/data';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss', '../../../assets/icon.scss']
+  styleUrls: ['./products.component.scss', './products2.component.scss', '../../../assets/icon.scss']
 })
 export class ProductsComponent implements OnInit, AfterViewInit {
   productList = products
@@ -15,6 +15,7 @@ export class ProductsComponent implements OnInit, AfterViewInit {
   searchedWords: string = '';
 
   constructor() {
+
   }
 
   ngOnInit(): void {
@@ -39,7 +40,6 @@ export class ProductsComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
 
     document.querySelectorAll('div[class^="product-delete"]').forEach(element => {
-      //console.log(element)
       element.addEventListener('click', (event: any) => {
         this.sortedProductList = this.sortedProductList.filter(x => x.id != event.target.parentElement.className.split('-')[2])
       })

@@ -1,0 +1,170 @@
+#users {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 100%;
+    max-width: calc(100vw - 220px);
+    height: 100%;
+    gap: 25px;
+
+    >input#users-search {
+        width: 400px;
+        border-radius: 50px;
+        background-color: #0F356B;
+        padding: 10px 15px;
+        border: none;
+        font-weight: 500;
+
+        &:focus-visible,
+        &:focus {
+            border: solid 3px #4A5FD9;
+            outline: none;
+            margin: -3px;
+        }
+    }
+
+    >.users-table {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        >.head-table {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            border-bottom: solid 2px white;
+
+
+            >.header {
+                padding: 10px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                height: 50px;
+
+                &:not(:last-child) {
+                    border-right: solid 2px white;
+                }
+
+                &:not(:first-child) {
+                    border-left: solid 2px white;
+                }
+
+                &:nth-child(1), &:nth-child(2){
+                    width: 100px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                &:nth-child(3) {
+                    flex: auto;
+                }
+
+                >p {
+                    font-weight: 500;
+                }
+
+                >.arrow {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    right: 10px;
+                    gap: 10px;
+
+                    >input {
+                        display: none;
+
+                        &:checked+label>span {
+                            color: white;
+                        }
+                    }
+
+                    >label {
+                        height: 10px;
+                        display: flex;
+
+                        >span {
+                            font-size: 13px;
+                            height: 10px;
+                            color: #707070;
+                            cursor: pointer;
+                            transition: all 0.2s;
+
+                        }
+
+                        &:nth-child(4) {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        >.users {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            >.user {
+                display: flex;
+                height: 75px;
+                width: 100%;
+                align-items: center;
+                border-top: solid 1px #0f63af80;
+                overflow: hidden;
+
+                >.user-id, >.user-picture {
+                    min-width: 100px;
+                    display: flex;
+                    justify-content: center;
+                }
+                >.user-name{
+                    padding: 10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 100%;
+                    font-size: 18px;
+                }
+                >.interactions{
+                    display: flex;
+                    gap: 10px;
+
+                    div{
+                        &:first-child > *{
+                            color: #4A5FD9;
+                        }
+                        &:last-child > *{
+                            color: crimson;
+                        }
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                        >span{
+                            display: none;
+                        }
+                    }
+
+
+
+                    >div:first-child{
+                        color: #4A5FD9;
+                    }
+                    >p:last-child{
+                        color: crimson;
+                    }
+                    >p:hover{
+                        text-decoration: underline;
+                    }
+                }
+                &:hover {
+                    background-color: #ffffff15;
+                    cursor: pointer;
+                }
+                &:last-child {
+                    border-bottom: solid 1px #0f63af80;
+                }
+            }
+        }
+    }
+}
