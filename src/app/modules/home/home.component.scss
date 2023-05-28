@@ -189,3 +189,14 @@
         }
     }
 }
+
+.most-saw-products>.products>.product>div:nth-child(2)>p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.data-order {
+    grid-row: 3/6;
+}
