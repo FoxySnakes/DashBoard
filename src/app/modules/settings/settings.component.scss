@@ -1,0 +1,125 @@
+#settings {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 100%;
+    max-width: calc(100vw - 220px);
+    height: 100%;
+    gap: 50px;
+
+    >div > h3 {
+        font-size: 28px;
+        color: #4A5FD9;
+        border-bottom: solid 1px #4A5FD9;
+    }
+
+    >.global-settings{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        >.culture{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            >p{
+                font-weight: 400;
+            }
+            >#culture{
+                border-radius: 5px;
+                background-color: #0F2853;
+                padding: 5px;
+                border: solid 1px #3f4b94;
+                font-size: 16px;
+    
+                &:focus-visible,
+                &:focus {
+                    border: solid 3px #4A5FD9;
+
+                    margin: -3px;
+                }
+            }
+        }
+        >.theme{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            >input{
+                display: none;
+
+                &:checked + label{
+                    border: solid 3px #4A5FD9;
+                    outline: none;
+                }
+            }
+            >label{
+                width: 30px;
+                height: 30px;
+                border-radius: 50px;
+
+                &:first-of-type{
+                    background-color: white;
+                }
+                &:last-of-type{
+                    background-color: black;
+                }
+            }
+        }
+    }
+
+    >.user-settings {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        >div {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            >label{
+                font-weight: 400;
+            }
+
+            >div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+
+                >input {
+                    border-radius: 5px;
+                    background-color: #0F2853;
+                    padding: 5px;
+                    border: solid 1px #3f4b94;
+                    font-size: 16px;
+
+                    &:focus-visible,
+                    &:focus {
+                        border: solid 3px #4A5FD9;
+                        outline: none;
+                        margin: -3px;
+                    }
+                }
+                >span{
+                    position: absolute;
+                    top: -25px;
+                    font-size: 15px;
+                    color: orangered;
+                    font-weight: 500;
+                    opacity: 0;
+                    transition: all 0.5s;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #settings {
+        width: auto;
+        max-width: calc(100vw - 20px);
+    }
+}

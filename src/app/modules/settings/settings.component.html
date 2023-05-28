@@ -1,1 +1,51 @@
-<p>settings works!</p>
+<div id="settings">
+    <div class="global-settings">
+        <h3>Paramètres généraux</h3>
+        <div class="culture">
+            <p>Langue : </p>
+            <select name="culture" id="culture">
+                <option value="francais" selected>Francais</option>
+                <option value="anglais">Anglais</option>
+                <option value="allemand">Allemand</option>
+            </select>
+        </div>
+        <div class="theme">
+            <p>Thème : </p>
+            <input type="radio" name="theme" id="white">
+            <label for="white"></label>
+            <input type="radio" name="theme" id="black" checked>
+            <label for="black"></label>
+        </div>
+    </div>
+    <div class="user-settings">
+        <h3>Paramètres Utilisateurs</h3>
+        <div>
+            <label for="name">Nom :</label>
+            <div>
+                <input type="text" name="lastname" id="lastname" value="{{userLastName}}" required>
+                <span id="lastname-error"></span>
+            </div>
+        </div>
+        <div>
+            <label for="name">Prénom :</label>
+            <div>
+                <input type="text" name="firstname" id="firstname" value="{{userFirstName}}" required>
+                <span id="firstname-error"></span>
+            </div>
+        </div>
+        <div>
+            <label for="name">E-mail :</label>
+            <div>
+                <input type="email" name="mail" id="mail" value="{{userMail}}" required>
+                <span id="mail-error"></span>
+            </div>
+        </div>
+        <div>
+            <label for="name">Téléphone :</label>
+            <div>
+                <input type="tel" name="phone" id="phone" value="{{userPhone}}" pattern="[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}" required>
+                <span id="phone-error"></span>
+            </div>
+        </div>
+    </div>
+</div>
