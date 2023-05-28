@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart} from 'chart.js/auto';
+import { OrderStatus } from 'src/app/models/order';
 import { orders, products, users } from 'src/assets/data';
 
 @Component({
@@ -9,16 +10,21 @@ import { orders, products, users } from 'src/assets/data';
 })
 export class HomeComponent implements OnInit {
   
+  orderPlaced = orders.filter(order => order.state == OrderStatus.Placed)
+  orderPending = orders.filter(order => order.state == OrderStatus.Pending)
+  orderCompleted = orders.filter(order => order.state == OrderStatus.Completed)
+
   bestProducts = products.sort((a, b) => a.id - b.id).slice(0, 5);
   recentOrders = orders.sort((a, b) => a.dateCreated.getDate() - b.dateCreated.getDate()).slice(0, 5);
 
   canvas : any;
   today = new Date(Date.now());
   salesData = [
-    70, 69, 72, 73, 71, 66, 65, 69, 68, 62,
-    66, 70, 74, 79, 73, 77, 72, 76, 81, 75,
-    72, 75, 79, 75, 77, 80, 76, 75, 79, 81
+    6, 5, 7, 6, 8, 7, 6, 8, 7, 9,
+    8, 6, 7, 6, 8, 7, 6, 8, 7, 9,
+    8, 6, 7, 6, 8, 7, 6, 8, 7, 9
   ];
+  
   dates = Array.from({ length: 30 }, (x, i) => {
     const date = new Date(this.today)
     date.setDate(this.today.getDate() - i)
@@ -93,8 +99,8 @@ export class HomeComponent implements OnInit {
             ticks : {
               color: '#808080'
             },
-            suggestedMax: 90,
-            suggestedMin: 50,
+            suggestedMax: 15,
+            suggestedMin: 0,
             display: true,
             title: {
               display: true,
@@ -143,7 +149,7 @@ export class HomeComponent implements OnInit {
       return user;
     }
     else{
-      //console.error(`No user exist with Id ${userId}`)
+      console.error(`No user exist with Id ${userId}`)
       return null;
     }
   }
